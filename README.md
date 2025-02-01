@@ -9,12 +9,12 @@ This project uses a Convolutional Neural Network (CNN) to detect diseases in tom
   
 **Project Structure** 
 Tomato-Leaf-Disease-Detection-DeepLearning/
-├── TomatoDiseaseDetection.py         # Main script
-├── TomatoDiseaseDetection_optimizedvscode2nd.h5  # Trained CNN model (via Git LFS)
-├── templates/
-│   └── index.html                    # Web interface
-├── .gitattributes                    # Git LFS config
-└── README.md                         # This file
+* TomatoDiseaseDetection.py         # Main script
+* TomatoDiseaseDetection_optimizedvscode2nd.h5  # Trained CNN model (via Git LFS)
+* templates/
+*    index.html                    # Web interface
+*    .gitattributes                    # Git LFS config
+*     README.md                         # This file
 
 **Clone the Repository:** 
 git clone https://github.com/KandukuriAmar/Tomato-Leaf-Disease-Detection-DeepLearning.git
