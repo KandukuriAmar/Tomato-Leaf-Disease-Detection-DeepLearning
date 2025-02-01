@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomato Leaf Disease Detection Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .result-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .image-preview {
+            margin-top: 20px;
+            margin-left: 130px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Tomato Leaf Disease Detection</h2>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label>Upload Image:</label>
+        <input type="file" name="file" id="file-input" accept="image/*" required onchange="previewImage(event)">
+        <br/><br/>
+        <button type="submit">Detect</button>
+    </form>
+
+    <img id="preview" class="image-preview" alt="Uploaded Image Preview">
+
+    {% if result %}
+        <div class="result-box">
+            <h2>Result: {{ result }}</h2>
+        </div>
+    {% endif %}
+</div>
+
+<script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var preview = document.getElementById("preview");
+            preview.src = reader.result;
+            preview.style.display = "block";
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+</body>
+</html>
