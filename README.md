@@ -14,7 +14,7 @@ Tomato-Leaf-Disease-Detection-DeepLearning/
 * templates/
 *    index.html                    # Web interface
 *    .gitattributes                    # Git LFS config
-*     README.md                         # This file
+*    README.md                         # This file
 
 **Clone the Repository:** 
 git clone https://github.com/KandukuriAmar/Tomato-Leaf-Disease-Detection-DeepLearning.git
